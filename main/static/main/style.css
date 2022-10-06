@@ -1,0 +1,154 @@
+body{
+    position: absolute;
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    background-color: #414141;
+
+    margin: auto;
+    padding: auto;
+}
+
+
+/*
+=====
+Navigation
+=====
+*/
+
+.nav__menu{
+    width: 100%;
+    height: 150px;
+
+    background-color: #212121;
+}
+
+.nav__sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: -75px;
+}
+
+.part{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+.part .nav_menu{
+    flex: auto;
+}
+
+.part ul{
+    list-style-type: none;
+
+    overflow: hidden;
+
+    height: 75px;
+    margin: 0;
+    padding: 0;
+}
+
+.part ul li{
+    height: 100%;
+    display: inline-block;
+}
+
+.part ul a{
+    font-size: 18px;
+    color: #fff;
+    padding: 0 1em;
+
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    text-decoration: none;
+}
+
+.part .login_panel ul a{
+    text-decoration: underline;
+}
+
+.nav_page{
+    width: 70%;
+    height: 100%;
+
+    margin: 0 auto;
+}
+
+.img_logo{
+    height: 75px;
+    width: auto;
+
+    object-fit: cover;
+}
+
+.contain{
+    position: relative;
+
+    left: 2em;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+/*
+=====
+Login
+=====
+*/
+
+.login_panel{
+    height: 100%;
+    width: 200px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/*
+=====
+Main part
+=====
+*/
+
+.page{
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
+
+div .main{
+    width: 70%;
+}
+
+div .ads{
+    flex: auto;
+}
+
+/*
+=====
+SETTINGS
+=====
+*/
+
+/*
+=====
+Debug
+=====
+*/
+
+.debug{
+    border: 1px solid white;
+}
+
+.debugRed{
+    border: 1px solid red;
+}

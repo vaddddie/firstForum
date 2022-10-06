@@ -3,7 +3,7 @@ from django.views import View
 
 
 class index(View):
-    template_name = 'main/baseIndex.html'
+    template_name = 'main/homePage.html'
 
     context = {
 

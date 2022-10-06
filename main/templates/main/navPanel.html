@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <nav class="nav__menu nav__sticky">
+        <div class="nav_page">
+            <div class="part">
+                <div>
+                    <a href="/"><img class="img_logo" src="{% static 'main/Logo.png' %}"></a>
+                </div>
+                <div style="flex: auto; overflow: hidden;">
+                    <div class="contain">
+                        <a href="/" style="font-size: 36px; color: #fff; text-decoration: none;">Forum name</a>
+                    </div>
+                </div>
+                <div style="height: 100%; width: 200px;">
+                    in development
+                </div>
+            </div>
+            <div class="part">
+                <div class="nav_menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="login_panel">
+                    <ul>
+                        <li><a>Log in</a></li>
+                        <li><a>Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="page">
+        <div class="ads"></div>
+        <div class="main">
+            <div>
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <div class="ads"></div>
+    </div>
+</body>
+</html>
