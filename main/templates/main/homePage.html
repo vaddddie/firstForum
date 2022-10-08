@@ -1,6 +1,23 @@
 {% extends 'main/navPanel.html' %}
 
 {% block title %}Home{% endblock %}
+{% block login %}
+    {% if user.is_authenticated %}
+        <ul>
+            <li>
+                <a href="#">{{ user.get_username }}</a>
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">Log out</a>
+            </li>
+        </ul>
+    {% else %}
+        <ul>
+            <li><a href="{% url 'login' %}">Log in</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    {% endif %}
+{% endblock %}
 {% block content %}
     <div style="height: 2500px;">
 
