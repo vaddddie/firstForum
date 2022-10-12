@@ -1,0 +1,23 @@
+{% extends 'main/navPanel.html' %}
+
+{% block title %}Log in{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+
+         {% for el in form %}
+            <p><label for="{{ el.id_for_label }}">{{ el.label }}: </label>{{ el }}</p>
+            <div>{{ el.errors }}</div>
+         {% endfor %}
+
+        <a href="{% url 'password_reset' %}">Lost password?</a><br>
+
+        <button type="submit">Login</button>
+
+    </form>
+{% endblock %}

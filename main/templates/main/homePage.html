@@ -14,7 +14,7 @@
     {% else %}
         <ul>
             <li><a href="{% url 'login' %}">Log in</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{% url 'registration' %}">Register</a></li>
         </ul>
     {% endif %}
 {% endblock %}

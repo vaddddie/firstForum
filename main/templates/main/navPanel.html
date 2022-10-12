@@ -12,11 +12,11 @@
         <div class="nav_page">
             <div class="part">
                 <div>
-                    <a href="/"><img class="img_logo" src="{% static 'main/Logo.png' %}"></a>
+                    <a href="{% url 'home' %}"><img class="img_logo" src="{% static 'main/Logo.png' %}"></a>
                 </div>
                 <div style="flex: auto; overflow: hidden;">
                     <div class="contain">
-                        <a href="/" style="font-size: 36px; color: #fff; text-decoration: none;">Forum name</a>
+                        <a href="{% url 'home' %}" style="font-size: 36px; color: #fff; text-decoration: none;">Forum name</a>
                     </div>
                 </div>
                 <div style="height: 100%; width: 200px;">
@@ -26,7 +26,7 @@
             <div class="part">
                 <div class="nav_menu">
                     <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Forum</a></li>
                         <li><a href="#">News</a></li>
